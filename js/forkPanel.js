@@ -37,6 +37,7 @@ function getForkDisplayPanel() {
             forkDisplayItems[i].style.borderColor = "#326987";
         getMessageA(i,forkDisplayItems[i]);
         forkDisplayItems[i].setAttribute("onclick","forkDisplayItemOnclick("+i+")");
+        forkDisplayItems[i].setAttribute("ondblclick","location.reload()");
         forkDisplayPanel.appendChild(forkDisplayItems[i]);
     }
     forkPanel.appendChild(forkDisplayPanel);
@@ -63,7 +64,7 @@ function forkDisplayItemOnclick(r) {
     }
     for(var i=sid-1;i>=0;i--) {
         var newa = getEleWithText(strarr[i], "a");
-        newa.setAttribute("onclick","window.location.href="+((i<fid)?"'articleForkDemo.html'":"'blogpagedemo.html'"));
+        newa.setAttribute("onclick",((i<fid)?"window.location.href='articleForkDemo.html'":"location.reload()"));
         forkButtonPanel.appendChild(newa);
     }
     choosenForkItem = r;
