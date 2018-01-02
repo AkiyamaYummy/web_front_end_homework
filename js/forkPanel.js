@@ -72,7 +72,7 @@ function forkDisplayItemOnclick(r) {
 function getMessageA(r,ele) {
     //节点编号 1 ，用户 肥仔 对节点 0 文章建立 进行了 分支 操作。节点名 提交1 。
     var mes = itemsMessage[r];
-    var strarr = ["文章建立","建立分支","续写分支","合并到主分支"]
+    var strarr = ["文章建立","续写分支","建立分支","合并到主分支"]
     ele.appendChild(getEleWithText("节点编号","a"));
     ele.appendChild(getEleWithText(mes[0],"strong"));
     ele.appendChild(getEleWithText("。用户","a"));
