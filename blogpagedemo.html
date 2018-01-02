@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>蒙娜丽莎的微笑</title>
+    <link rel="icon" href="pics/mainico.ico" type="image/x-icon"/>
+    <link href="css/mainShell.css" rel="stylesheet" type="text/css"/>
+    <link href="css/articlePageText.css" rel="stylesheet" type="text/css"/>
+    <link href="css/elves.css" rel="stylesheet" type="text/css"/>
+    <link href="css/loginButton.css" rel="stylesheet" type="text/css"/>
+    <link href="css/artileBeautify.css" rel="stylesheet" type="text/css"/>
+    <link href="css/forkPanel.css" rel="stylesheet" type="text/css"/>
+    <style>
+        #articleTitlePic{
+            background-image: url("pics/mainpage/displays/display0.png");
+        }
+    </style>
+</head>
+<body onload="bodyOnload()" id="body" onselectstart="return false">
+<div id="loadMask">
+    <div><div></div></div>
+    <a>LOADING...<br>PLEASE&nbsp;WAIT</a>
+</div>
+<div id="elves"></div>
+<div id="titlePicDiv">
+    <div id="topButtonPanel">
+        <div id="topButtonPanelBack">
+            <ul id="buttonList">
+                <a href="index.html">
+                    <img src="pics/mainpage/titles/topico.png"
+                         id="topIco" title="首页"/>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="mainPanel">
+    <div id="mainPanelTopButtonPanel">
+        <ul id="mainPanelTopButtonList">
+            <a onclick="mainPanelTopButtonListOnclice(0)"><li>首页
+                <div></div>
+            </li></a>
+            <a onclick="mainPanelTopButtonListOnclice(1)"><li style="color: #326987">文章
+                <div style="background: #326987"></div>
+            </li></a>
+            <a onclick="mainPanelTopButtonListOnclice(2)"><li>用户
+                <div></div>
+            </li></a>
+        </ul>
+    </div>
+    <div id="textPanel">
+        <div id="articleTitlePic">
+            <div id="articleTitlePicMask"></div>
+            <forkBut title="查看分支" onclick="showLoginPanel(2)"><forkIco></forkIco></forkBut>
+            <a1>蒙娜丽莎的微笑</a1>
+            <a2>列奥纳多·达·芬奇创作的著名画作。</a2>
+        </div>
+        <div id="articleAuthorPanel">
+            <a1>2017/11/20</a1>
+            <a2>测试账号</a2>
+            <a3>漫谈区</a3>
+        </div>
+        <div id="articleTextPanel">
+            <blockquote>
+                <p>意大利史学家、小说家帕拉蒂科称，达·芬奇生母就是《蒙娜丽莎》的画中人，而她有可能是来自中国大陆的奴隶。弗洛伊德1910年表示，蒙娜丽莎画作背景是中国的景观，甚至“蒙娜丽莎”的长相看起来都像中国人。《蒙娜丽莎》现存法国巴黎卢浮宫博物馆。</p></blockquote>
+            <p>《<strong>蒙娜丽莎</strong>》是<em>意大利文艺复兴时期</em>著名画家<strong>列奥纳多·达·芬奇</strong>创作的绘画作品。《蒙娜丽莎》成功地塑造了资本主义上升时期一位城市有产阶级的妇女形象。“蒙娜丽莎”看上去，似乎并不符合一般划定的美人们心目中的典型偶像范式，但“她”的魅力，又的确让人难以抗拒。</p>
+            <p><img src="pics/blogDemoPage/pic1.png" alt="达芬奇自画像" title="达芬奇自画像"></p>
+        </div>
+    </div>
+    <div id="footPanel">
+        <div id="linkIcoPanel">
+            <div class="linkIcos"
+                 onclick="window.open('https://github.com/AkiyamaYummy')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/githubIco.png')">
+            </div>
+            <div class="linkIcos"
+                 onclick="window.open('https://weibo.com/MPA001')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/weiboIco.png')">
+            </div>
+            <div class="linkIcos"
+                 onclick="alert('邮件功能还没做，抱歉哈。')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/emailIco.png')">
+            </div>
+            <div class="linkIcosTitle"><a>Github</a></div>
+            <div class="linkIcosTitle"><a>新浪微博</a></div>
+            <div class="linkIcosTitle"><a>邮件投递</a></div>
+        </div>
+        <div id="footPanelBottomLine">
+            <a>Copyright&nbsp;&#169;&nbsp;2017&nbsp;-&nbsp;2017&nbsp;akiyama&nbsp;yummy&nbsp;All rights reserved.</a>
+        </div>
+    </div>
+</div>
+<div id="returnTopButton" onclick="returnTop()"></div>
+<script type="text/javascript" src="js/mainShell.js"></script>
+<script type="text/javascript" src="js/elves.js"></script>
+<script type="text/javascript" src="js/loginButton.js"></script>
+<script type="text/javascript" src="js/forkPanel.js"></script>
+<script>
+    function bodyOnload() {
+        /*if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
+            window.location.href = "mobile.html"; */
+        loginButtonInit();
+        elvesInit();
+        mainShellOnload();
+    }
+</script>
+</body>
+</html>

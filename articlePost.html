@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>文章发布</title>
+    <link rel="icon" href="pics/mainico.ico" type="image/x-icon"/>
+    <link href="css/mainShell.css" rel="stylesheet" type="text/css"/>
+    <link href="css/articlePageText.css" rel="stylesheet" type="text/css"/>
+    <link href="css/elves.css" rel="stylesheet" type="text/css"/>
+    <link href="css/loginButton.css" rel="stylesheet" type="text/css"/>\
+    <link href="css/artilePostPage.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <style>
+        #articleTitlePic{
+            background-image: url("pics/articlePostPage/bg.png");
+        }
+    </style>
+</head>
+<body onload="bodyOnload()" id="body" onselectstart="return false">
+<div id="loadMask">
+    <div><div></div></div>
+    <a>LOADING...<br>PLEASE&nbsp;WAIT</a>
+</div>
+<div id="elves"></div>
+<div id="titlePicDiv">
+    <div id="topButtonPanel">
+        <div id="topButtonPanelBack">
+            <ul id="buttonList">
+                <a href="index.html">
+                    <img src="pics/mainpage/titles/topico.png"
+                         id="topIco" title="首页"/>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="mainPanel">
+    <div id="mainPanelTopButtonPanel">
+        <ul id="mainPanelTopButtonList">
+            <a onclick="mainPanelTopButtonListOnclice(0)"><li>首页
+                <div></div>
+            </li></a>
+            <a onclick="mainPanelTopButtonListOnclice(1)"><li>文章
+                <div></div>
+            </li></a>
+            <a onclick="mainPanelTopButtonListOnclice(2)"><li style="color: #326987">用户
+                <div style="background: #326987"></div>
+            </li></a>
+        </ul>
+    </div>
+    <div id="textPanel">
+        <div id="articleTitlePic">
+            <div id="articleTitlePicMask"></div>
+            <a1>文章发布</a1>
+            <a2>请认真填写文章信息哦。</a2>
+        </div>
+        <div id="editPanelLeft">
+            <input type="text" class="articalMessageInputText"
+                   value="请填写第一标题" id="messageInput_0"
+                   onfocus="messageInputOnfocus(0)"
+                   onblur="messageInputOnblur(0)"/>
+            <input type="text" class="articalMessageInputText"
+                   value="请填写第二标题" id="messageInput_1"
+                   onfocus="messageInputOnfocus(1)"
+                   onblur="messageInputOnblur(1)"/>
+            <input type="text" class="articalMessageInputText"
+                   value="请填写封面图片链接" id="messageInput_2"
+                   onfocus="messageInputOnfocus(2)"
+                   onblur="messageInputOnblur(2)"/>
+            <div id="articalChannelPanel">
+                <a>请选择文章分区</a>
+                <label><input name="channel" type="radio"/>文学区</label>
+                <label><input name="channel" type="radio"/>漫谈区</label>
+                <label><input name="channel" type="radio"/>科技区</label>
+                <label><input name="channel" type="radio"/>活动区</label>
+            </div>
+            <div id="submitBut" onclick="submitRun([0,1,2])"><a>发布文章</a></div>
+        </div>
+        <div id="editPanelRight">
+            <textarea id="editArea"></textarea>
+        </div>
+    </div>
+    <div id="footPanel">
+        <div id="linkIcoPanel">
+            <div class="linkIcos"
+                 onclick="window.open('https://github.com/AkiyamaYummy')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/githubIco.png')">
+            </div>
+            <div class="linkIcos"
+                 onclick="window.open('https://weibo.com/MPA001')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/weiboIco.png')">
+            </div>
+            <div class="linkIcos"
+                 onclick="alert('邮件功能还没做，抱歉哈。')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/emailIco.png')">
+            </div>
+            <div class="linkIcosTitle"><a>Github</a></div>
+            <div class="linkIcosTitle"><a>新浪微博</a></div>
+            <div class="linkIcosTitle"><a>邮件投递</a></div>
+        </div>
+        <div id="footPanelBottomLine">
+            <a>Copyright&nbsp;&#169;&nbsp;2017&nbsp;-&nbsp;2017&nbsp;akiyama&nbsp;yummy&nbsp;All rights reserved.</a>
+        </div>
+    </div>
+</div>
+<div id="returnTopButton" onclick="returnTop()"></div>
+<script type="text/javascript" src="js/mainShell.js"></script>
+<script type="text/javascript" src="js/elves.js"></script>
+<script type="text/javascript" src="js/loginButton.js"></script>
+<script type="text/javascript" src="js/artilePostPage.js"></script>
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script>
+    var simplemde;
+    function bodyOnload() {
+        /*if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
+            window.location.href = "mobile.html"; */
+        simplemde = new SimpleMDE({ element: document.getElementById("editArea"),spellChecker:false });
+        loginButtonInit();
+        elvesInit();
+        mainShellOnload();
+    }
+</script>
+</body>
+</html>

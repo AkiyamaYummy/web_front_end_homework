@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>测试账号的个人空间</title>
+    <link rel="icon" href="pics/mainico.ico" type="image/x-icon"/>
+    <link href="css/mainShell.css" rel="stylesheet" type="text/css"/>
+    <link href="css/elves.css" rel="stylesheet" type="text/css"/>
+    <link href="css/loginButton.css" rel="stylesheet" type="text/css"/>
+    <link href="css/artilePageLeftPanel.css" rel="stylesheet" type="text/css"/>
+    <link href="css/userPage.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        #textPanel{
+            width: 1100px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body onload="bodyOnload()" onscroll="checkScroll();checkScrollForUserRightPanel()"
+      onselectstart="return false" id="body">
+<div id="loadMask">
+    <div><div></div></div>
+    <a>LOADING...<br>PLEASE&nbsp;WAIT</a>
+</div>
+<div id="elves"></div>
+<div id="titlePicDiv">
+    <div id="topButtonPanel">
+        <div id="topButtonPanelBack">
+            <ul id="buttonList">
+                <a href="index.html">
+                    <img src="pics/mainpage/titles/topico.png"
+                         id="topIco" title="首页"/>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="mainPanel">
+    <div id="mainPanelTopButtonPanel">
+        <ul id="mainPanelTopButtonList">
+            <a onclick="mainPanelTopButtonListOnclice(0)"><li>首页
+                <div></div>
+            </li></a>
+            <a onclick="mainPanelTopButtonListOnclice(1)"><li>文章
+                <div></div>
+            </li></a>
+            <a onclick="mainPanelTopButtonListOnclice(2)"><li style="color: #326987">用户
+                <div style="background: #326987"></div>
+            </li></a>
+        </ul>
+    </div>
+    <div id="textPanel">
+        <div id="userTopPanel">
+            <div id="userTopBackground"></div>
+            <div id="userTopHeadPortrait"></div>
+            <div id="userTextMessage">
+                <a1>测试账号</a1>
+                <a2>什么都不是，只做做测试。</a2>
+            </div>
+        </div>
+        <div id="userMidPanel">
+            <div id="userLeftPanel">
+                <tit>他的作品</tit>
+                <div id="articleLeftPanel"></div>
+            </div>
+            <div id="userRightPanel">
+                <div class="userRightPanelHeadShow">
+                    <a1>他的关注</a1>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <a2>等10位用户被他关注</a2>
+                </div>
+                <div class="userRightPanelHeadShow">
+                    <a1>关注他的</a1>
+                    <div></div>
+                    <div></div>
+                    <a2>共2位用户关注了他</a2>
+                </div>
+                <div class="userRightPanelHeadShow">
+                    <a1>他近期浏览过的标签</a1>
+                    <tagpanel id="userRightPanelTagPanel">
+                        <tag>示例</tag>
+                        <tag>示例</tag>
+                        <tag>示例</tag>
+                        <tag>示例标签</tag>
+                        <tag>示例标签</tag>
+                        <tag>示例标签</tag>
+                    </tagpanel>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footPanel">
+        <div id="linkIcoPanel">
+            <div class="linkIcos"
+                 onclick="window.open('https://github.com/AkiyamaYummy')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/githubIco.png')">
+            </div>
+            <div class="linkIcos"
+                 onclick="window.open('https://weibo.com/MPA001')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/weiboIco.png')">
+            </div>
+            <div class="linkIcos"
+                 onclick="alert('邮件功能还没做，抱歉哈。')"
+                 style="background-image:
+                         url('pics/mainpage/footPanel/emailIco.png')">
+            </div>
+            <div class="linkIcosTitle"><a>Github</a></div>
+            <div class="linkIcosTitle"><a>新浪微博</a></div>
+            <div class="linkIcosTitle"><a>邮件投递</a></div>
+        </div>
+        <div id="footPanelBottomLine">
+            <a>Copyright&nbsp;&#169;&nbsp;2017&nbsp;-&nbsp;2017&nbsp;akiyama&nbsp;yummy&nbsp;All rights reserved.</a>
+        </div>
+    </div>
+</div>
+<div id="returnTopButton" onclick="returnTop()"></div>
+<script type="text/javascript" src="js/mainShell.js"></script>
+<script type="text/javascript" src="js/elves.js"></script>
+<script type="text/javascript" src="js/artilePageLeftPanel.js"></script>
+<script type="text/javascript" src="js/loginButton.js"></script>
+<script type="text/javascript" src="js/userPage.js"></script>
+<script>
+    function bodyOnload() {
+        /*if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
+            window.location.href = "mobile.html"; */
+        loginButtonInit();
+        elvesInit();
+        articleLeftPanelInit();
+        mainShellOnload();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+#userTopPanel{
+    width: 100%;
+    position: relative;
+    height: 370px;
+}
+#userTopBackground{
+    width: 1096px;
+    height: 300px;
+    position: absolute;
+    left: 2px;
+    background-image: url("pics/userPage/bg.png");
+    background-size: cover;
+    background-position: center;
+}
+#userTopHeadPortrait{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 20px;
+    border: solid 7px white;
+    left: 50px;
+    bottom: 0px;
+    background-image: url("pics/userPage/hp.png");
+    background-size: cover;
+    background-position: center;
+}
+#userTextMessage{
+    left: 280px;
+    top: 303px;
+    height: 70px;
+    width: 800px;
+    position: absolute;
+}
+#userTextMessage a1{
+    display: block;
+    font-size: 40px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: hsl(0,0%,20%);
+}
+#userTextMessage a2{
+    display: block;
+    font-size: 23px;
+    font-family: "楷体";
+    font-weight: bold;
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    color: hsl(0,0%,40%);
+}
+#userMidPanel{
+    width: 1091px;
+    margin-left: 2px;
+    padding-top: 20px;
+    padding-left: 5px;
+    background-image: -webkit-linear-gradient(grey 0%,hsla(0,0%,100%,0) 400px);
+    background-image: -moz-linear-gradient(grey 0%,hsla(0,0%,100%,0) 400px);
+    background-image: linear-gradient(grey 0%,hsla(0,0%,100%,0) 400px);
+    position: relative;
+}
+#userLeftPanel{
+    width: 840px;
+    background: white;
+    border-radius: 10px;
+    min-height: 600px;
+}
+#userLeftPanel tit{
+    font-family: "sans-serif";
+    color: white;
+    position: absolute;
+    font-size: 14px;
+    display: block;
+    top: 0px;
+    left: 15px;
+}
+#userRightPanel{
+    width: 220px;
+    height: 580px;
+    position: absolute;
+    top: 20px;right: 5px;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.userRightPanelHeadShow{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 40px;
+    font-family: "sans-serif";
+    color: hsl(0,0%,40%);
+}
+.userRightPanelHeadShow a1{
+    width: 100%;
+    float: left;
+    font-size: 17px;
+}
+.userRightPanelHeadShow div{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("pics/userPage/hpo.png");
+    cursor: pointer;
+}
+.userRightPanelHeadShow a2{
+    width: 100%;
+    text-align: center;
+    float: left;
+    font-size: 12px;
+    cursor: pointer;
+}
+.userRightPanelHeadShow a2:focus,
+.userRightPanelHeadShow a2:hover{
+    color: #326987;
+}
+#userRightPanelTagPanel{
+    display: block;
+    margin-left: 10px;
+    padding-top: 5px;
+    float: left;
+}
+#userRightPanelTagPanel tag{
+    display: inline;
+    float: left;
+    font-size: 12px;
+    padding: 2px 7px;
+    margin-right: 5px;
+    margin-top: 3px;
+    border-radius: 3px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+#userRightPanelTagPanel tag:focus,
+#userRightPanelTagPanel tag:hover{
+    box-shadow: 0px 0px 3px black;
+}

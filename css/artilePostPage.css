@@ -1,0 +1,65 @@
+#editPanelLeft{
+    width: 1088px;
+    height: 83px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+#editPanelRight{
+    width: 1090px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.articalMessageInputText{
+    width: 507px;
+    color: grey;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    margin-left: 15px;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 20px;
+    float: left;
+    padding-left: 10px;
+    font-family: "宋体";
+    font-weight: bold;
+}
+.articalMessageInputText:focus{
+    color: black;
+    border: 1px solid black;
+}
+#articalChannelPanel{
+    width: 507px;
+    height: 23px;
+    float: left;
+    margin-top: 12px;
+    margin-left: 25px;
+    color: grey;
+}
+#submitBut{
+    height: 120px;
+    width: 35px;
+    background: #ddd;
+    border-radius: 3px;
+    position: absolute;
+    margin-left: 1090px;
+    margin-top: 76px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+}
+#submitBut:focus, #submitBut:hover{
+    background: hsl(0,0%,30%);
+}
+#submitBut a{
+    color: white;
+    font-weight: bold;
+    font-family: "楷体";
+    font-size: 20px;
+    line-height: 100%;
+    display: block;
+    margin-top: 17px;
+}

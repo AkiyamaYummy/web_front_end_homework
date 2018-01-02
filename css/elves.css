@@ -1,0 +1,52 @@
+#elves{
+    height: 144px;
+    width: 144px;
+    background-image: url("../pics/penguin.png");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: 9;
+    left: 0;  top: 0;
+}
+#elvesDialog{
+    height: 160px;
+    width: 270px;
+    background: hsl(0,0%,20%);
+    border-radius: 10px;
+    border: ridge 1px hsl(0,0%,100%);
+    position: absolute;
+    margin-left: -270px;
+    margin-top: -120px;
+    overflow: hidden;
+    color: hsl(0,0%,100%);
+}
+#elvesDialog text{
+    position: absolute;
+    overflow-y: scroll;
+    padding-right: 30px;
+    height: 110px;
+    width: 260px;
+    margin-left: 10px;
+    margin-top: 7px;
+    font-size: 12px;
+}
+#elvesDialog butPan{
+    position: absolute;
+    height: 40px;
+    width: 160px;
+    margin-left: 110px;
+    margin-top: 120px;
+    font-size: 13px;
+    font-weight: bold;
+}
+#elvesDialog butPan a{
+    margin-right: 10px;
+    width: 70px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+}
+#elvesDialog butPan a:focus,
+#elvesDialog butPan a:hover{
+    color: #5BC3FF;
+}
